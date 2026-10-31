@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 7 - Flexbox Landing Page</title>
+
+    <style>
+        /* Basic CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* 7.1 Navbar using Flexbox */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: #172554;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-right a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-btn {
+            background: #2563eb;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* 7.2 Hero Banner using Flexbox */
+        .hero {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            background: white;
+            color: #1d4ed8;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 7.3 Cards using Flexbox */
+        .cards-section {
+            padding: 50px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card h2 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #64748b;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #172554;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards-section {
+                padding: 35px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 7.1 Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">CodeMaster</div>
+
+        <nav class="nav-right">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+
+            <button class="nav-btn">Login</button>
+        </nav>
+
+    </header>
+
+    <!-- 7.2 Hero Banner -->
+    <section class="hero" id="home">
+
+        <h1>Welcome to CodeMaster</h1>
+
+        <p>
+            Learn coding, improve your skills and
+            build your future with technology.
+        </p>
+
+        <button class="hero-btn">Get Started</button>
+
+    </section>
+
+    <!-- 7.3 Responsive Cards -->
+    <section class="cards-section" id="courses">
+
+        <h2 class="section-title">Our Popular Courses</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h2>HTML</h2>
+                <p>
+                    Learn the basics of HTML and
+                    create your first website.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>CSS</h2>
+                <p>
+                    Design beautiful websites using
+                    CSS and modern layouts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>JavaScript</h2>
+                <p>
+                    Make your websites interactive
+                    with JavaScript programming.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Java</h2>
+                <p>
+                    Learn programming concepts
+                    and object-oriented development.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <p>© 2026 CodeMaster | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
